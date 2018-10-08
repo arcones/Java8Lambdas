@@ -1,4 +1,4 @@
-package sw.arcones.unit1;
+package sw.arcones.unit2;
 
 import javax.swing.*;
 
