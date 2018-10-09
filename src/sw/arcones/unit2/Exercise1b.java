@@ -6,8 +6,8 @@ import java.util.stream.Stream;
 public class Exercise1b {
 
     private static Function<Integer, Integer> signChange = x -> -x;
-    private static Function<Stream<Integer>, Integer> addUp = integers -> integers.reduce((int1, int2) -> int1 + int2).orElse(0);
-    private static Function<Stream<Integer>, Integer> multiply = integers -> integers.reduce((int1, int2) -> int1 * int2).orElse(0);
+    private static Function<Stream<Integer>, Integer> addUp = integers -> integers.reduce(0, (int1, int2) -> int1 + int2);
+    private static Function<Stream<Integer>, Integer> multiply = integers -> integers.reduce(1, (int1, int2) -> int1 * int2);
 
     public static void main(String[] args) {
         System.out.println("Sign changed -> " + signChange.apply(3));
